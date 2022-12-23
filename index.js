@@ -71,6 +71,6 @@ app.use("/", authRouter);
 app.use("/", ThoughtController.showThoughts);
 
 
-conn.sync({force: true}).then(() => {
+conn.sync().then(() => {
     app.listen(3000);
 }).catch((err) => console.log(err));
